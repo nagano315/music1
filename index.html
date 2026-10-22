@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>音楽の趣味趣向ビジュアライザー</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>楽曲の特徴パラメーター</h1>
+  <p id="subtitle">各項目を0〜100のスケールで表示</p>
+</header>
+<main>
+  <section class="card chart-card">
+    <div id="radar" aria-label="レーダーチャート"></div>
+    <div class="legend">
+      <span><i class="dot avg"></i>全曲平均</span>
+      <span id="legend-sel" hidden><i class="dot sel"></i><b id="sel-name"></b></span>
+    </div>
+  </section>
+
+  <aside class="side">
+    <section class="card">
+      <h2>あなたの傾向</h2>
+      <div id="tags" class="tags"></div>
+      <p id="summary"></p>
+      <dl id="stats" class="stats"></dl>
+    </section>
+    <section class="card">
+      <h2>ジャンル分布</h2>
+      <div id="genres"></div>
+    </section>
+  </aside>
+
+  <section class="card songs">
+    <h2>曲リスト <small>クリックで平均と比較</small></h2>
+    <div class="table-wrap"><table id="song-table"></table></div>
+  </section>
+</main>
+<footer>
+  <label class="upload">別のCSVを読み込む<input type="file" id="file" accept=".csv"></label>
+  <span>データ: Chosic</span>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
